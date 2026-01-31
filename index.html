@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <title>Guess My Number</title>
+
+   <!-- <style>
+        html, body {
+            height: 100%;
+        }
+        body{
+            background: linear-gradient(55deg, #00AAFF 0%, #001133 100%);
+            margin: 0;
+             min-height: 100vh;
+        }
+    </style> -->
+</head>
+<body>
+    <section id="game">
+        <!-- <div class="main"> -->
+
+            <!-- Top part -->
+        <div id="topPart">
+            <h3>GUESS MY NUMBER!</h3>
+            <p>Guess a number between 1 and 20</p>
+        </div>
+
+        <!-- Middle Part -->
+
+        <div id="middle">
+            <div id="questionMark">
+                <p id="question">?</p>
+            </div>
+
+            <div id="checkerDiv">
+                <input id="enterGuess" type="text" placeholder="Enter your guess">
+                 <button id="check">Check</button>
+            </div>
+        </div>
+
+        <!-- Bottom Part -->
+
+        <div id="bottom">
+            <div id="guess">
+                <p id="display">Start guessing...</p>
+                <!-- <p id="count"></p> -->
+                <div id="score">
+                    <p>Score: 0</p>
+                    <p>Highscore: 0</p>
+                </div>
+            </div>
+            <button id="playAgain">Play Again</button>
+        </div>
+
+    <!-- </div> -->
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
