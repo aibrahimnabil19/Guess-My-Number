@@ -15,7 +15,7 @@ body{
 }
 section{
     width: 543px;
-    /* height: ; */
+    /* height: 50vh; */
     padding: 64px 10px;
     background: #FFFFFF;
     /* display fle */
@@ -109,6 +109,11 @@ p{
     font-weight: 500;
     font-size: 16px;
 }
+#check:hover{
+    cursor: pointer;
+    background-color: #3f4d6a;
+    transform: scale(1.01);
+}
 
 
 /* ------------Bottom Part---------------- */
@@ -134,7 +139,7 @@ p{
 #guess > p:first-of-type{
     font-size: 12px;
 }
-#score{
+#scores{
     display: flex;
     justify-content: space-between;
     align-items: center;
