@@ -96,8 +96,28 @@ const guessChecker = (number) => {
         question.textContent = random
         questionMark.style.backgroundColor = "#B5EBBE"
         // check.ariaDisabled(true)
+        if (count == 0)
+            scoreValue+=10
+        if (count == 1)
+            scoreValue+=9
+        if (count == 2)
+            scoreValue+=8
+        if (count == 3)
+            scoreValue+=7
+        if (count == 4)
+            scoreValue+=6
+        if (count == 5)
+            scoreValue+=5
+        if (count == 6)
+            scoreValue+=4
+        if (count == 7)
+            scoreValue+=3
+        if (count == 8)
+            scoreValue+=2
+        if (count == 9)
+            scoreValue+=1
         count = 0
-        scoreValue++
+        // scoreValue++
         if (highScoreValue < scoreValue){
             highScoreValue = scoreValue
             highScore.textContent = `Highscore: ${highScoreValue}`
