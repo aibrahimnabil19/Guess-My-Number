@@ -7,6 +7,8 @@ html,body{
     height: 100%;
 }
 body{
+    min-height: 100vh;
+    padding: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,14 +16,14 @@ body{
     font-family: "Poppins", sans-serif;
 }
 section{
-    width: 543px;
+    width: min(92vw, 543px);
     /* height: 50vh; */
-    padding: 64px 10px;
+    padding: clamp(24px, 5vw, 64px) clamp(16px, 3vw, 32px);
     background: #FFFFFF;
     /* display fle */
     display: grid;
     grid-template-columns: repeat(1fr);
-    gap: 30px;
+    gap: clamp(18px, 3vw, 30px);
     justify-content: center;
     /* align-items: center; */
     border-radius: 16px;
@@ -30,7 +32,7 @@ section{
 }
 h3{
     font-weight: 600;
-    font-size: 32px;
+    font-size: clamp(22px, 4vw, 32px);
     color: #001133;
 }
 p{
@@ -38,13 +40,12 @@ p{
 }
 /* ------------Top Part---------------- */
 #topPart{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    gap: 10px;
     text-align: center;
 }
 #topPart p{
-    font-size: 16px;
+    font-size: clamp(14px, 2.2vw, 16px);
     font-weight: 400;
 }
 
@@ -52,18 +53,18 @@ p{
 #middle{
     /* display: flex;
     flex-direction: column; */
-     display: grid;
+    display: grid;
     grid-template-columns: repeat(1fr);
-    gap: 44px;
-    justify-content: center;
+    gap: clamp(16px, 4vw, 44px);
+    /* justify-content: center; */
     /* width: 187px; */
-    align-items: center;
+    place-items: center;
     /* text-align: center; */
 }
 #questionMark{
-    width: 87px;
-    height: 87px;
-    border-radius: 100px;
+    width: clamp(68px, 18vw, 87px);
+    height: clamp(68px, 18vw, 87px);
+    border-radius: 1000px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,7 +72,7 @@ p{
     color: white;
 }
 #questionMark p{
-    font-size: 64px;
+    font-size: clamp(40px, 10vw, 64px);
     font-weight: 600;
     color: white;
 }
@@ -81,23 +82,28 @@ p{
     gap: 20px;
     align-items: center;
     justify-content: center;
-    width: 181px;
+    /* gap: 14px; */
+    width: 100%;
+    max-width: 320px;
 }
 #checkerDiv input{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 6px 16px;
     width: 181px;
     height: 56px;
+    padding: 6px 16px;
+
     background-color: #F7F6F8;
-    border-style: none;
+    border: 1px solid #e6e6ea;
+    border-radius: 10px;
+
     font-size: 16px;
     font-weight: 400;
-    /* text-align: ; */
+    outline: none;
+}
+#checkerDiv input:focus {
+  border-color: #001133;
 }
 #check{
-    padding: 16px 32px;
+    /* padding: 16px 32px; */
     /* font-family:; */
     width: 181px;
     height: 48px;
@@ -119,13 +125,13 @@ p{
 /* ------------Bottom Part---------------- */
 #bottom{
     display: grid;
-    grid-template-columns: repeat(1fr);
+    /* grid-template-columns: repeat(1fr); */
     /* grid-template-columns: 285px 285px 181px;
     grid-auto-rows: 100px; */
-    gap: 48px;
+    gap: clamp(18px, 4vw, 48px);
     align-items: center;
     justify-content: center;
-    /* width: 285px; */
+    width: 100%;
     text-align: center;
 }
 #guess{
@@ -134,6 +140,7 @@ p{
     gap: 63px;
     font-weight: 400;
     color: #333333;
+    width: 100%;
     /* text-align: center; */
 }
 #guess > p:first-of-type{
@@ -145,6 +152,7 @@ p{
     align-items: center;
     font-size: 16px;
     gap: 114px;
+    width: 100%;
 }
 #playAgain{
     width: 181px;
@@ -160,4 +168,18 @@ p{
 }
 #middle, #bottom{
     place-items: center;
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 14px;
+  }
+
+  #checkerDiv input {
+    height: 52px;
+    width: 100%;
+  }
+  #check, #playAgain{
+    width: 100%;
+  }
 }
